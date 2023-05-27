@@ -22,6 +22,19 @@
     --bg-color-span: #a8e256;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444452;
+    border-radius: 3px;
+}
+
 body {
     background-color: var(--bg-color);
     width: 100%;
@@ -210,7 +223,7 @@ header ul li a:hover::after {
 }
 
 main {
-    transform: translateY(50%);
+    transform: translateY(100%);
 }
 
 .presentation {
