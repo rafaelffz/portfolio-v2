@@ -210,7 +210,7 @@ header ul li a:hover::after {
 }
 
 main {
-    margin-top: 20rem;
+    transform: translateY(50%);
 }
 
 .presentation {

@@ -46,6 +46,7 @@ body {
     font-family: 'Lato', sans-serif;
     color: var(--text-color);
     margin-inline: 6rem;
+    height: 100vh;
 }
 
 nav .nav-wrapper {
@@ -224,7 +225,7 @@ header ul li a:hover::after {
 }
 
 main {
-    margin-top: 20rem;
+    transform: translateY(100%);
 }
 
 .presentation {
