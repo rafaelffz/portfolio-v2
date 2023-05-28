@@ -1,78 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <title>Rafael | Front-End Developer</title>
+    </head>
 
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@600;700&family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>Rafael | Front-End Developer</title>
-</head>
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="nav-wrapper">
+                        <div class="logo-wrapper">
+                            <a class="logo-link" href="#presentation">
+                                <span class="logo-color">&lt;</span>
+                                <span>rafaelffz</span>
+                                <span class="logo-color last-code"
+                                    >&frasl;&gt;</span
+                                >
+                                <!-- <img class="logo" src="./assets/logo_black.svg" alt="Logo do portfolio"> -->
+                            </a>
+                        </div>
 
-<body>
-    <div class="container">
-        <header>
-            <nav>
-                <div class="nav-wrapper">
-                    <div class="logo-wrapper">
-                        <a class="logo-link" href="/#">
-                            <span class="logo-color">&lt;</span>
-                            <span>rafaelffz</span>
-                            <span class="logo-color last-code">&frasl;&gt;</span>
-                            <!-- <img class="logo" src="./assets/logo_black.svg" alt="Logo do portfolio"> -->
+                        <ul>
+                            <li class="list-items">
+                                <a href="#about">sobre</a>
+                            </li>
+                            <li class="list-items">
+                                <a href="#skills">habilidades</a>
+                            </li>
+                            <li class="list-items">
+                                <a href="#projects">projetos</a>
+                            </li>
+                            <li class="list-items">
+                                <a href="#contact">contato</a>
+                            </li>
+                        </ul>
+
+                        <a href="/app/build/en/index.html">
+                            <div class="flags">
+                                <img
+                                    class="br-flag"
+                                    src="/app/assets/brazil-flag.svg"
+                                    alt="bandeira do Brasil"
+                                />
+                                <img
+                                    class="uk-flag"
+                                    src="/app/assets/uk-flag.svg"
+                                    alt="bandeira da Inglaterra"
+                                />
+                            </div>
                         </a>
-                    </div>
 
-                    <ul>
-                        <li class="about">
-                            <a href="">sobre</a>
-                        </li>
-                        <li class="skills">
-                            <a href="">habilidades</a>
-                        </li>
-                        <li class="projects">
-                            <a href="">projetos</a>
-                        </li>
-                        <li class="contact">
-                            <a href="">contato</a>
-                        </li>
-                    </ul>
+                        <div class="switch-wrapper">
+                            <i class="ph-bold ph-sun"></i>
 
-                    <a href="/app/build/en/index.html">
-                        <div class="flags">
-                            <img class="br-flag" src="/app/assets/brazil-flag.svg" alt="bandeira do Brasil">
-                            <img class="uk-flag" src="/app/assets/uk-flag.svg" alt="bandeira da Inglaterra">
+                            <div class="toggle-wrapper" onclick="toggleMode()">
+                                <button></button>
+                                <span></span>
+                            </div>
+
+                            <i class="ph-bold ph-moon"></i>
                         </div>
-                    </a>
-
-                    <div class="switch-wrapper">
-                        <i class="ph-bold ph-sun"></i>
-
-                        <div class="toggle-wrapper" onclick="toggleMode()">
-                            <button></button>
-                            <span></span>
-                        </div>
-
-                        <i class="ph-bold ph-moon"></i>
                     </div>
+                </nav>
+            </header>
+
+            <main>
+                <div id="presentation" class="presentation">
+                    <h2>Olá! eu sou o Rafael, um</h2>
+
+                    <div class="initial-bar"></div>
+
+                    <h1>estudante e desenvolvedor</h1>
+                    <span>front-end</span>
+                    <i class="ph-light ph-caret-down"></i>
                 </div>
-            </nav>
-        </header>
+                <div id="about">
+                    <h1 class="about-title">um pouco sobre mim</h1>
+                    <p class="about-content">
+                        Meu nome é Rafael, tenho 16 anos e atualmente estou
+                        cursando o 2º ano do Ensino Médio. Gosto de aprender
+                        novas coisas porque dessa forma consigo sempre melhorar
+                        para resolver novos problemas, enfrentar novas situações
+                        e aumentar meu conhecimento. Sempre fui uma pessoa
+                        apaixonada e curiosa quando o tema é tecnologia,
+                        pensando até onde ela seria capaz de chegar para nos
+                        ajudar a realizar determinadas tarefas. Por isso
+                        acredito que essa minha curiosidade me ajuda a continuar
+                        avançando.
+                    </p>
+                </div>
+                <div id="skills">
+                    <h1 class="skills-title">habilidades</h1>
 
-        <main>
-            <div class="presentation">
-                <h2>Olá! eu sou o Rafael, um</h2>
-                <div class="initial-bar"></div>
-                <h1>estudante e desenvolvedor</h1><span>front-end</span>
-                <i class="ph-light ph-caret-down"></i>
-            </div>
-        </main>
-    </div>
-    <script src="./js/script.js"></script>
-</body>
-
+                </div>
+            </main>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
 </html>
