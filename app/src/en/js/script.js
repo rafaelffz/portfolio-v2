@@ -5,8 +5,8 @@ function toggleMode() {
     body.classList.toggle('dark')
     
     if(bodyDark === false) {
-        githubIcon.setAttribute('src', '/app/assets/icons8-github-white.svg')
+        githubIcon.setAttribute('src', '/app/assets/icons/icons8-github-white.svg')
     } else {
-        githubIcon.setAttribute('src', '/app/assets/icons8-github.svg')
+        githubIcon.setAttribute('src', '/app/assets/icons/icons8-github.svg')
     }
 }

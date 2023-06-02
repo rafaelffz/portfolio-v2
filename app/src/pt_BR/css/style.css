@@ -64,11 +64,6 @@ header {
     width: 100%;
 }
 
-.border-gradient-bottom {
-    border-bottom: 1px solid;
-    border-image: radial-gradient(var(--border-gradient-color), #00000000) 1;
-}
-
 header ul {
     display: flex;
     list-style: none;
@@ -394,6 +389,7 @@ main div:not(:first-child) {
     padding: 10rem;
     border-bottom: 1px solid;
     border-image: radial-gradient(var(--text-color), #00000000) 1;
+    position: relative;
 }
 
 #about .about-title {
@@ -456,7 +452,7 @@ main div:not(:first-child) {
 }
 
 #skills .skills-content:has(div:hover) div:not(:hover) {
-    filter: grayscale(80%);
+    filter: grayscale(70%);
 }
 
 #projects {
@@ -468,4 +464,163 @@ main div:not(:first-child) {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2.6rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.projects-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5rem;
+    gap: 2.4rem;
+}
+
+.projects-content .project-wrapper {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    border-radius: 6px;
+}
+
+.projects-content .project-wrapper:hover {
+    outline: 2px solid var(--text-contrast-color);
+}
+
+.projects-content:has(.project-wrapper:hover) .project-wrapper:not(:hover) {
+    scale: .95;
+}
+
+.projects-content .project-wrapper img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: filter 400ms ease-in-out;
+    transition: transform 350ms ease-in-out;
+}
+
+.projects-content .project-wrapper:hover img {
+    filter: blur(2px);
+    transform: scale(1.2);
+}
+
+.projects-content .project-wrapper:hover a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    opacity: 1;
+    background-color: var(--text-contrast-color);
+    padding: 10px 15px;
+    border-radius: 999px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    animation: fromTop 350ms ease-in-out;
+    z-index: 2;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
+}
+
+.projects-content .project-wrapper:hover a:nth-of-type(1) {
+    left: 20%;
+}
+
+.projects-content .project-wrapper:hover a:nth-of-type(2) {
+    right: 20%;
+}
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-300%);
+    }
+}
+
+.projects-content .project-wrapper::after {
+    content: var(--text);
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75)) 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.projects-content .project-wrapper:hover::after {
+    opacity: 1;
+    animation: fromBottom 250ms ease-in-out;
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateY(100%);
+    }
+}
+
+#contact {
+    background-color: #7c7c7e;
+    background-color: #1f1f20;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+#contact .social-links {
+    display: flex;
+    gap: 3.2rem;
+    font-size: 2.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .social-links a {
+    padding: 1rem;
+    background-color: #333333;
+    color: #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .social-links a:hover {
+    animation: socialLinksHover 250ms ease-in-out forwards;
+}
+
+@keyframes socialLinksHover {
+    from {
+        transform: translateY(0);
+        scale: 1;
+    } to {
+        transform: translateY(-10%);
+        scale: 1.1;
+    }
+}
+
+#contact .references {
+    color: #c5c5c5;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+#contact .references a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#contact .page-details {
+    color: #e0e0e0;
+    font-size: 1.6rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 }
