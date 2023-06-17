@@ -16,6 +16,7 @@
     --text-contrast-color: #4167ef;
     --text-color-ul-hover: #464646;
     --bg-color-switch: #444452;
+    --box-shadow-color: rgba(0, 0, 0, 0.418);
 }
 
 .dark {
@@ -24,6 +25,7 @@
     --text-color: #ffffff;
     --text-color-ul-hover: #d4d4d4;
     --bg-color-switch: #a8e256;
+    --box-shadow-color: #4d4d4d73;
 }
 
 ::-webkit-scrollbar {
@@ -102,7 +104,7 @@ header ul li a:hover::after {
 nav .nav-wrapper {
     display: flex;
     align-items: center;
-    margin: 1.2rem 6rem;
+    margin: 1.8rem 6rem;
 }
 
 .nav-wrapper .logo-wrapper {
@@ -240,6 +242,10 @@ nav .nav-wrapper {
     }
 }
 
+#btn-mobile {
+    display: none;
+}
+
 main div:not(:first-child) {
     scroll-margin: 59px;
 }
@@ -267,7 +273,7 @@ main div:not(:first-child) {
 
 .presentation .initial-bar {
     display: block;
-    width: 0rem;
+    width: 0%;
     height: 0.2rem;
     margin: 0.2rem 0;
     background-color: var(--text-color);
@@ -306,12 +312,12 @@ main div:not(:first-child) {
 
     50% {
         transform: scaleX(1);
-        width: 90rem;
+        width: 90%;
     }
 
     60% {
         transform: scaleX(1);
-        width: 90rem;
+        width: 90%;
     }
 
     100% {
@@ -321,7 +327,7 @@ main div:not(:first-child) {
 
 @keyframes start-h2 {
     from {
-        transform: translateY(45%);
+        transform: translateY(40%);
     }
 
     to {
@@ -384,7 +390,7 @@ main div:not(:first-child) {
 }
 
 #about {
-    background: var(--bg-color-secondary) url(/app/assets/marginalia-programming.gif) no-repeat 85% center;
+    background: var(--bg-color-secondary);
     margin-top: 10rem;
     padding: 10rem;
     border-bottom: 1px solid;
@@ -399,12 +405,23 @@ main div:not(:first-child) {
 }
 
 #about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+}
+
+#about .about-content p {
     margin-top: 4rem;
     font-size: 2rem;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     max-width: 60rem;
     line-height: 170%;
+}
+
+#about .about-content img {
+    width: 100%;
+    height: 100%;
 }
 
 #skills {
@@ -448,7 +465,6 @@ main div:not(:first-child) {
 #skills .skills-content img {
     width: 72px;
     height: 72px;
-    z-index: 5;
 }
 
 #skills .skills-content:has(div:hover) div:not(:hover) {
@@ -474,6 +490,7 @@ main div:not(:first-child) {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 5rem;
     gap: 2.4rem;
+    place-items: center;
 }
 
 .projects-content .project-wrapper {
@@ -483,14 +500,11 @@ main div:not(:first-child) {
     overflow: hidden;
     transition: all 200ms ease-in-out;
     border-radius: 6px;
+    box-shadow: 4px 5px 6px var(--box-shadow-color);
 }
 
 .projects-content .project-wrapper:hover {
     outline: 2px solid var(--text-contrast-color);
-}
-
-.projects-content:has(.project-wrapper:hover) .project-wrapper:not(:hover) {
-    scale: .95;
 }
 
 .projects-content .project-wrapper img {
@@ -595,7 +609,9 @@ main div:not(:first-child) {
     from {
         transform: translateY(0);
         scale: 1;
-    } to {
+    }
+
+    to {
         transform: translateY(-10%);
         scale: 1.1;
     }
@@ -623,4 +639,185 @@ main div:not(:first-child) {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+}
+
+@media (max-width: 1215px) {
+    :root {
+        font-size: 50%;
+    }
+
+    .presentation h2,
+    .presentation .initial-bar,
+    .presentation h1,
+    .presentation span {
+        opacity: 1;
+        animation: none;
+    }
+
+    #about .about-content img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .projects-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects-content .project-wrapper {
+        width: 90%;
+        height: 220px;
+    }
+}
+
+@media (max-width: 930px) {
+    :root {
+        font-size: 45%;
+    }
+
+    header nav ul {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 52px;
+        left: 0;
+        background-color: var(--bg-color);
+        height: 0;
+        z-index: 1000;
+        transition: .4s;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    header nav ul li {
+        border-bottom: 1px solid;
+        border-image: radial-gradient(var(--text-color), rgba(0, 0, 0, 0.048)) 1;
+    }
+
+    header nav ul li:hover {
+        cursor: pointer;
+        background-color: var(--bg-color-secondary);
+    }
+
+    header nav ul li a {
+        display: flex;
+        font-family: "Poppins", sans-serif;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 250%;
+        padding-left: 5%;
+        padding-block: 5rem;
+    }
+
+    header nav ul li a::after {
+        display: none;
+    }
+
+    header nav ul.active {
+        height: 100vh;
+        visibility: visible;
+    }
+
+    .menu-hamburger {
+        margin-left: 3rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    #hamburger {
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        position: relative;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    header nav ul.active ~ .menu-hamburger #hamburger {
+        border-top-color: transparent;
+    }
+
+    header nav ul.active ~ .menu-hamburger #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    header nav ul.active ~ .menu-hamburger #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    nav .nav-wrapper {
+        margin-left: 5%;
+    }
+
+    #about {
+        background: var(--bg-color-secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+        gap: 5rem;
+    }
+    
+    #about .about-content img {
+        width: 250px;
+        height: 250px;
+    }
+
+    #skills {
+        padding: 10rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills .skills-content {
+        flex-wrap: wrap;
+    }
+
+    #skills .skills-content img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #projects {
+        padding: 10rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects .projects-title {
+        padding: 0 8rem;
+    }
+
+    .projects-content {
+        grid-template-columns: 1fr;
+        gap: 4.2rem;
+    }
+
+    .projects-content .project-wrapper {
+        width: 80%;
+        height: 250px;
+    }
 }

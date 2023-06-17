@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./src/css/style.css"/>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Rafael | Front-End Developer</title>
 </head>
@@ -30,27 +30,27 @@
                     </div>
 
                     <ul>
-                        <li class="list-items">
+                        <li class="list-items" onclick="closeMenu()">
                             <a href="#about">sobre</a>
                         </li>
-                        <li class="list-items">
+                        <li class="list-items" onclick="closeMenu()">
                             <a href="#skills">habilidades</a>
                         </li>
-                        <li class="list-items">
+                        <li class="list-items" onclick="closeMenu()">
                             <a href="#projects">projetos</a>
                         </li>
-                        <li class="list-items">
+                        <li class="list-items" onclick="closeMenu()">
                             <a href="#contact">contato</a>
                         </li>
                     </ul>
 
-                    <a href="/app/src/en/index.html">
+                    <!-- <a href="/app/src/en/index.html">
                         <div class="flags">
                             <img class="br-flag" src="/app/assets/brazil-flag.svg" alt="Brazil
                                  flag" />
                             <img class="uk-flag" src="/app/assets/uk-flag.svg" alt="United Kingdom flag" />
                         </div>
-                    </a>
+                    </a> -->
 
                     <div class="switch-wrapper">
                         <i class="ph-bold ph-sun"></i>
@@ -61,6 +61,11 @@
                         </div>
 
                         <i class="ph-bold ph-moon"></i>
+                    </div>
+
+                    <div class="menu-hamburger">
+                        <input type="checkbox" name="" id="btn-mobile">
+                        <span id="hamburger"></span>
                     </div>
                 </div>
             </nav>
@@ -78,14 +83,18 @@
             </div>
             <div id="about">
                 <h1 class="about-title">um pouco sobre mim</h1>
-                <p class="about-content">
-                    Meu nome é Rafael, tenho 16 anos e atualmente estou cursando o 2º ano do Ensino Médio. Gosto de
-                    aprender novas coisas porque dessa forma consigo sempre melhorar para resolver novos problemas,
-                    enfrentar novas situações e aumentar meu conhecimento. Sempre fui uma pessoa apaixonada e
-                    curiosa quando o assunto é tecnologia, pensando até onde ela seria capaz de chegar para nos ajudar
-                    a realizar determinadas tarefas. Por isso acredito que essa minha curiosidade me ajuda a
-                    continuar avançando.
-                </p>
+                <div class="about-content">
+                    <p>
+                        Meu nome é Rafael, tenho 16 anos e atualmente estou cursando o 2º ano do Ensino Médio. Gosto de
+                        aprender novas coisas porque dessa forma consigo sempre melhorar para resolver novos problemas,
+                        enfrentar novas situações e aumentar meu conhecimento. Sempre fui uma pessoa apaixonada e
+                        curiosa quando o assunto é tecnologia, pensando até onde ela seria capaz de chegar para nos ajudar
+                        a realizar determinadas tarefas. Por isso acredito que essa minha curiosidade me ajuda a
+                        continuar avançando.
+                    </p>
+
+                    <img src="./assets/marginalia-programming.gif" alt="gif of a boy programming">
+                </div>
             </div>
 
             <div id="skills">
@@ -93,22 +102,24 @@
                 <div class="skills-content">
                     <div class="html-icon">
                         <span>HTML5</span>
-                        <img src="/app/assets/icons/icons8-html.svg" alt="HTML icon by icons8">
+                        <img src="./assets/icons/icons8-html.svg
+                        " alt="HTML icon by icons8">
                     </div>
 
                     <div class="css-icon">
                         <span>CSS3</span>
-                        <img src="/app/assets/icons/icons8-css.svg" alt="CSS icon by icons8">
+                        <img src="./assets/icons/icons8-css.svg
+                        " alt="CSS icon by icons8">
                     </div>
 
                     <div class="js-icon">
                         <span>JavaScript</span>
-                        <img src="/app/assets/icons/icons8-javascript.svg" alt="JavaScript icon by icons8">
+                        <img src="./assets/icons/icons8-javascript.svg" alt="JavaScript icon by icons8">
                     </div>
 
                     <div class="github-icon">
                         <span>GitHub</span>
-                        <img src="/app/assets/icons/icons8-github.svg" alt="GitHub icon by icons8">
+                        <img src="./assets/icons/icons8-github.svg" alt="GitHub icon by icons8">
                     </div>
                 </div>
             </div>
@@ -204,7 +215,7 @@
             </div>
 
             <div class="references">
-                <span>Imagens e ícones por: <a href="https://icons8.com.br">Icons8</a></span>
+                <span>Imagens e ícones por: <a href="https://icons8.com.br" target="_blank">Icons8</a></span>
             </div>
 
             <div class="page-details">
@@ -213,7 +224,7 @@
             </div>
         </footer>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./src/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
