@@ -599,22 +599,12 @@ main div:not(:first-child) {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .2s ease-in;
 }
 
 #contact .social-links a:hover {
-    animation: socialLinksHover 250ms ease-in-out forwards;
-}
-
-@keyframes socialLinksHover {
-    from {
-        transform: translateY(0);
-        scale: 1;
-    }
-
-    to {
-        transform: translateY(-10%);
-        scale: 1.1;
-    }
+    transform: translateY(-10%);
+    scale: 1.1;
 }
 
 #contact .references {
