@@ -25,3 +25,11 @@ btnMobile.addEventListener('touchstart', toggleMenu)
 function closeMenu() {
     btnMobile.click()
 }
+
+const caretdown = document.querySelector('#presentation i.ph-caret-down')
+const about = document.querySelector('.nav-wrapper ul li a[href="#about"]')
+
+caretdown.addEventListener('click', () => {
+    about.click()
+    btnMobile.click()
+})

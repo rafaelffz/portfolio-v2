@@ -305,6 +305,10 @@ main div:not(:first-child) {
     animation: floating 3s infinite ease-in-out;
 }
 
+.presentation .ph-caret-down:hover {
+    cursor: pointer;
+}
+
 @keyframes start-line {
     0% {
         transform: scaleX(0);
@@ -402,6 +406,10 @@ main div:not(:first-child) {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2.6rem;
+    max-width: max-content;
+    height: 5rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, var(--text-color), #00000000, #00000000) 1;
 }
 
 #about .about-content {
@@ -435,6 +443,10 @@ main div:not(:first-child) {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2.6rem;
+    max-width: max-content;
+    height: 5rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, var(--text-color), #00000000, #00000000) 1;
 }
 
 #skills .skills-content {
@@ -450,7 +462,7 @@ main div:not(:first-child) {
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: all 250ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 #skills .skills-content span {
@@ -467,8 +479,9 @@ main div:not(:first-child) {
     height: 72px;
 }
 
-#skills .skills-content:has(div:hover) div:not(:hover) {
-    filter: grayscale(70%);
+#skills .skills-content div:hover {
+    transform: translateY(-5%);
+    scale: 1.05;
 }
 
 #projects {
@@ -480,6 +493,10 @@ main div:not(:first-child) {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2.6rem;
+    max-width: max-content;
+    height: 5rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, var(--text-color), #00000000) 1;
 }
 
 .grid {
@@ -622,8 +639,8 @@ main div:not(:first-child) {
 }
 
 #contact .page-details {
-    color: #e0e0e0;
-    font-size: 1.6rem;
+    color: #c4c4c49d;
+    font-size: 1.4rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -757,11 +774,16 @@ main div:not(:first-child) {
         margin-left: 5%;
     }
 
+    .menu-hamburger {
+        margin-right: -5%;
+    }
+
     #about {
         background: var(--bg-color-secondary);
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-inline: 2rem;
     }
 
     #about .about-content {
