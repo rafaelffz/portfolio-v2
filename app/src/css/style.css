@@ -149,30 +149,6 @@ nav .nav-wrapper {
     }
 }
 
-.flags {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-left: 3rem;
-    cursor: pointer;
-}
-
-.flags .br-flag {
-    height: 2rem;
-    display: flex;
-    border-radius: 0.6rem;
-}
-
-.flags .uk-flag {
-    height: 2rem;
-    display: flex;
-    border-radius: 0.6rem;
-    position: absolute;
-    top: -0.4rem;
-    right: -0.5rem;
-    z-index: -1;
-}
-
 .switch-wrapper {
     display: flex;
     align-items: center;
